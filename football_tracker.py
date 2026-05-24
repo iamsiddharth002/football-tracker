@@ -75,7 +75,7 @@ def find_top_scorer():
 def search_players():
     name = input("Enter player name: ")
     for player in players:
-        if player["Name"] == name:
+        if player["Name"].lower() == name.lower():
             print(f"Name: {player['Name']}")
             print(f"Goals: {player['Goals']}")
             print(f"Assists: {player['Assists']}")
@@ -121,7 +121,7 @@ def update_player():
 
     for player in players:
 
-        if player['Name'] == update_baller:
+        if player['Name'].lower() == update_baller.lower():
 
             if upgraded_stats == "Goals":
                 player['Goals'] = updated_value
@@ -149,7 +149,7 @@ def delete_player():
     user_input = input("Enter name of the player to remove: ")
     for player in players:
 
-        if player['Name'] == user_input:
+        if player['Name'].lower() == user_input.lower():
             players.remove(player)
             save_players()
             print(f"{user_input} Removed successfully!")
