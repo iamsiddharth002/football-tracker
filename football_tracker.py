@@ -159,6 +159,15 @@ def delete_player():
 
 # delete_player()
 
+def filter_player():
+    min_goals = int(input("Show players with more than how many goals?"))
+    result = [player["Name"] for player in players if player["Goals"] > min_goals]
+
+    for player in result:
+        print(player)
+
+#filter_player()
+
 def menu():
     while True:
         print("1. Add Player")
@@ -169,7 +178,8 @@ def menu():
         print("6. Find Player Stats")
         print("7. Update Player Information")
         print("8. Delete Player")
-        print("9. Exit")
+        print("9. Filter Players By Goals")
+        print("10. Exit")
 
         choice = input("Enter your preferable choice: ")
 
@@ -201,13 +211,15 @@ def menu():
 
         elif choice == "8":
             delete_player()
-            break
 
         elif choice == "9":
+            filter_player()
+
+        elif choice == "10":
             print("Goodbye!")
             print("Thanks for using the app!...")
             break
-    
+
         else:
             print("Invalid choice! Please enter a valid choice.")
 
