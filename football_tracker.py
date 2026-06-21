@@ -1,4 +1,4 @@
-#From today i am starting a great journey and i will always be consistent with my brother CLAUDE and build a great business project called football tracker.
+#From today i am starting a great journey and i will always be consistent and build a great business project called football tracker.
 # 1.) create a function called add_player()
 # that takes these parameters:
 # --name
